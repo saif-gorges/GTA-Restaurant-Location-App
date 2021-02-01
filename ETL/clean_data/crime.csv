@@ -1,0 +1,141 @@
+neighbourhood_id,neighbourhood_name,total_average_crime_rate
+1,West Humber-Clairville,507.32
+2,Mount Olive-Silverstone-Jamestown,232.13
+3,Thistletown-Beaumond Heights,236.5
+4,Rexdale-Kipling,245.35
+5,Elms-Old Rexdale,216.8
+6,Kingsview Village-The Westway,131.05
+7,Willowridge-Martingrove-Richview,163.98
+8,Humber Heights-Westmount,123.32
+9,Edenbridge-Humber Valley,131.97
+10,Princess-Rosethorn,162.87
+11,Eringate-Centennial-West Deane,110.3
+12,Markland Wood,105.82
+13,Etobicoke West Mall,122.38
+14,Islington-City Centre West,224.03
+15,Kingsway South,174.37
+16,Stonegate-Queensway,137.05
+17,Mimico,244.87
+18,New Toronto,254.43
+19,Long Branch,218.17
+20,Alderwood,121.68
+21,Humber Summit,487.28
+22,Humbermede,348.45
+23,Pelmo Park-Humberlea,293.78
+24,Black Creek,279.08
+25,Glenfield-Jane Heights,290.82
+26,Downsview-Roding-CFB,379.92
+27,York University Heights,440.33
+28,Rustic,192.82
+29,Maple Leaf,133.53
+30,Brookhaven-Amesbury,198.98
+31,Yorkdale-Glen Park,479.62
+32,Englemount-Lawrence,145.27
+33,Clanton Park,198.32
+34,Bathurst Manor,118.65
+35,Westminster-Branson,129.4
+36,Newtonbrook West,215.43
+37,Willowdale West,198.77
+38,Lansing-Westgate,170.15
+39,Bedford Park-Nortown,179.32
+40,St.Andrew-Windfields,181.53
+41,Bridle Path-Sunnybrook-York Mills,219.45
+42,Banbury-Don Mills,133.02
+43,Victoria Village,218.95
+44,Flemingdon Park,145.9
+45,Parkwoods-Donalda,143.67
+46,Pleasant View,104.32
+47,Don Valley Village,152.18
+48,Hillcrest Village,152.55
+49,Bayview Woods-Steeles,115.28
+50,Newtonbrook East,171.87
+51,Willowdale East,124.58
+52,Bayview Village,130.08
+53,Henry Farm,175.95
+54,O'Connor-Parkview,224.02
+55,Thorncliffe Park,136.6
+56,Leaside-Bennington,114.9
+57,Broadview North,168.13
+58,Old East York,133.57
+59,Danforth East York,125.13
+60,Woodbine-Lumsden,116.53
+61,Taylor-Massey,227.42
+62,East End-Danforth,233.07
+63,The Beaches,141.42
+64,Woodbine Corridor,204.65
+65,Greenwood-Coxwell,250.87
+66,Danforth,250.02
+67,Playter Estates-Danforth,296.85
+68,North Riverdale,236.38
+69,Blake-Jones,235.1
+70,South Riverdale,292.97
+71,Cabbagetown-South St.James Town,395.63
+72,Regent Park,404.22
+73,Moss Park,880.22
+74,North St.James Town,332.17
+75,Church-Yonge Corridor,756.22
+76,Bay Street Corridor,885.75
+77,Waterfront Communities-The Island,356.53
+78,Kensington-Chinatown,717.93
+79,University,532.4
+80,Palmerston-Little Italy,229.03
+81,Trinity-Bellwoods,291.95
+82,Niagara,263.52
+83,Dufferin Grove,258.8
+84,Little Portugal,190.67
+85,South Parkdale,317.32
+86,Roncesvalles,258.23
+87,High Park-Swansea,171.37
+88,High Park North,148.17
+89,Runnymede-Bloor West Village,193.65
+90,Junction Area,208.85
+91,Weston-Pellam Park,247.8
+92,Corso Italia-Davenport,215.8
+93,Dovercourt-Wallace Emerson-Junction,250.73
+94,Wychwood,160.28
+95,Annex,329.8
+96,Casa Loma,151.95
+97,Yonge-St.Clair,107.75
+98,Rosedale-Moore Park,219.85
+99,Mount Pleasant East,127.18
+100,Yonge-Eglinton,260.92
+101,Forest Hill South,156.87
+102,Forest Hill North,161.37
+103,Lawrence Park South,150.42
+104,Mount Pleasant West,165.2
+105,Lawrence Park North,99.25
+106,Humewood-Cedarvale,118.33
+107,Oakwood Village,223.93
+108,Briar Hill-Belgravia,212.77
+109,Caledonia-Fairbank,202.58
+110,Keelesdale-Eglinton West,200.45
+111,Rockcliffe-Smythe,188.05
+112,Beechborough-Greenbrook,266.08
+113,Weston,310.32
+114,Lambton Baby Point,127.32
+115,Mount Dennis,179.0
+116,Steeles,104.93
+117,L'Amoreaux,143.58
+118,Tam O'Shanter-Sullivan,142.1
+119,Wexford/Maryvale,267.45
+120,Clairlea-Birchmount,287.22
+121,Oakridge,303.33
+122,Birchcliffe-Cliffside,237.02
+123,Cliffcrest,236.37
+124,Kennedy Park,314.38
+125,Ionview,145.38
+126,Dorset Park,218.65
+127,Bendale,235.32
+128,Agincourt South-Malvern West,230.8
+129,Agincourt North,122.53
+130,Milliken,232.1
+131,Rouge,133.7
+132,Malvern,192.18
+133,Centennial Scarborough,124.73
+134,Highland Creek,172.07
+135,Morningside,222.47
+136,West Hill,383.95
+137,Woburn,206.32
+138,Eglinton East,231.97
+139,Scarborough Village,262.1
+140,Guildwood,84.03
