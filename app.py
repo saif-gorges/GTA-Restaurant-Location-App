@@ -1,12 +1,14 @@
 # import necessary libraries
-from models import create_classes
+# from models import create_classes
 import os
-from flask import (
-    Flask,
-    render_template,
-    jsonify,
-    request,
-    redirect)
+
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
+
+from flask import Flask, render_template, jsonify, request, redirect
+from flask_sqlalchemy import SQLAlchemy
 
 #################################################
 # Flask Setup
@@ -16,16 +18,28 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
+engine = create_engine('postgres://ssbhhlzo:ml3hJfrli7AgJRwhxx_nIHmSITfYYTz4@ziggy.db.elephantsql.com:5432/ssbhhlzo')
 
-from flask_sqlalchemy import SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
+Base = automap_base()
+Base.prepare(engine, reflect=True)
 
-# Remove tracking modifications
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Save references to each table
+Neighbourhood = Base.classes.neighbourhood
+Income = Base.classes.income
+Crime = Base.classes.crime
+Ethnicity = Base.classes.ethnicity
+Restaurant = Base.classes.restaurant
+NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
+YelpRatings = Base.classes.yelp_ratings
 
-db = SQLAlchemy(app)
+# Create our session (link) from Python to the DB
+session = Session(engine)
 
-Pet = create_classes(db)
+
+#################################################
+# Flask Routes
+#################################################
+
 
 # create route that renders index.html template
 @app.route("/")
