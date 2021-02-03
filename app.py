@@ -23,14 +23,16 @@ engine = create_engine('postgres://ssbhhlzo:ml3hJfrli7AgJRwhxx_nIHmSITfYYTz4@zig
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
+print(Base.classes.keys())
+
 # Save references to each table
-Neighbourhood = Base.classes.neighbourhood
 Income = Base.classes.income
 Crime = Base.classes.crime
 Ethnicity = Base.classes.ethnicity
 Restaurant = Base.classes.restaurant
 NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
 YelpRatings = Base.classes.yelp_ratings
+
 
 # Create our session (link) from Python to the DB
 session = Session(engine)
@@ -48,7 +50,7 @@ def home():
 
 
 # Query the database and send the jsonified results
-@app.route('api/ethnicity/<neighbourhood>', methods=['GET'])
+@app.route('/api/ethnicity/<neighbourhood>', methods=['GET'])
 def get_ethnicity_data(neighbourhood):
     
     sel = [Ethnicity.neighbourhood_name,
