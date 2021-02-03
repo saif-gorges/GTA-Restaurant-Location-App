@@ -58,14 +58,13 @@ def get_ethnicity_data(neighbourhood):
             Ethnicity.african_origins,
             Ethnicity.caribbean_origins]
 
-    results = session.query(*sel).filter(Ethnicity.neighbourhood_name == neighbourhood).all()
+    results = session.query(*sel).filter(func.lower(Ethnicity.neighbourhood_name) == func.lower(neighbourhood)).all()
     session.close()
 
     data_all = []
 
     for item in results:
         data = {}
-        data['neighbourhood'] = item[0]
         data['oceania_origins']=item[1]
         data['asian_origins']=item[2]
         data['north_american_aboriginal_origins']=item[3]
@@ -83,54 +82,84 @@ def get_restaurant_data(neighbourhood):
     # Create a database session object
     session = Session(engine) 
 
-    # sel = [YelpRatings.restaurant_name,
-    #         YelpRatings.category,
-    #         YelpRatings.ratings,
-    #         YelpRatings.review_counts,
-    #         YelpRatings.zip_code]
-
-    categories = session.query(Restaurant.category, func.count(Restaurant.restaurant_name)).\
-                filter(Restaurant.neighbourhood_name == neighbourhood).\
-                group_by(Restaurant.category).\
-                order_by(func.count(Restaurant.restaurant_name).desc()).limit(10)
+    category_results = session.query(Restaurant.category, func.count(Restaurant.restaurant_name)).\
+                    filter(func.lower(Restaurant.neighbourhood_name) == func.lower(neighbourhood)).\
+                    group_by(Restaurant.category).\
+                    order_by(func.count(Restaurant.restaurant_name).desc()).limit(10)
+    
+    pricerange_results = session.query(Restaurant.price_range, func.count(Restaurant.restaurant_name)).\
+                    filter(func.lower(Restaurant.neighbourhood_name) == func.lower(neighbourhood)).\
+                    group_by(Restaurant.price_range).\
+                    order_by(func.count(Restaurant.price_range).asc()).all()        
 
     session.close()
 
-    data_all = []
+    categories = [result[0] for result in category_results]
+    num_restaurants = [result[1] for result in category_results]
 
-    for item in categories:
-        data = {}
-        data['category'] = item[0]
-        data['num_restaurants']=item[1]
-        data_all.append(data)
+    price_range = [result[0] for result in pricerange_results]
+    num_restaurants_pr = [result[1] for result in pricerange_results]
 
-    return jsonify(data_all)
-
-# @app.route('/api/crime', methods=['GET'])
-# def get_crime_data():
+    data = [
+    # Category
+    {
+        "category" : categories,   # Plot 1 - x axis
+        "num_restaurants_ca" : num_restaurants,   # Plot 1 - y axis value
+    # Price Range 
+        "price_range" : price_range,  # Plot 2 - x axis (multiple Xaxes)
+        "num_restaurants_pr" : num_restaurants_pr    # Plot 2 - y axis value
+    }]
     
-#     sel = [Crime.neighbourhood_name,
-#             Crime.total_average_crime_rate]
+    return jsonify(data)
 
-#     results = session.query(*sel).filter(Ethnicity.neighbourhood_name == neighbourhood).all()
+    # for item in categories:
+    #     data = {}
+    #     data['category'] = item[0]
+    #     data['num_restaurants']=item[1]
+    #     data_all.append(data)
 
-#     data_all = []
+    # return jsonify(data_all)
 
-#     for item in results:
-#         data = {}
-#         data['neighbourhood'] = item[0]
-#         data['oceania_origins']=item[1]
-#         data['asian_origins']=item[2]
-#         data['north_american_aboriginal_origins']=item[3]
-#         data['latin_origins']=item[4]
-#         data['european_origins']=item[5]
-#         data['african_origins']=item[6]
-#         data['caribbean_origins']=item[6]
-#         data_all.append(data)
-#     return jsonify(data_all)
+@app.route('/api/scatterplotdata', methods=['GET'])
+def get_scatterplot_data():
 
+    # Create a database session object
+    session = Session(engine) 
 
+    results = session.query(Income, Crime, NeighbourhoodRestaurant).\
+            filter(Income.neighbourhood_id == Crime.neighbourhood_id).\
+            filter(Income.neighbourhood_id == NeighbourhoodRestaurant.neighbourhood_id).all()
 
+    session.close()
+
+    # data_all = []
+
+    # for i, c, n in results:
+    #     data = {}
+    #     data['neighbourhood'] = i.neighbourhood_name
+    #     data['median_income'] = i.median_income
+    #     data['average_income'] = i.average_income
+    #     data['total_average_crime_rate'] = c.total_average_crime_rate
+    #     data['number_of_restaurants'] = n.number_of_restaurants
+    #     data_all.append(data)
+
+    # return jsonify(data_al)
+
+    neighbourhood = [i.neighbourhood_name for i, c, n in results]
+    median_income = [i.median_income for i, c, n in results]
+    average_income = [i.average_income for i, c, n in results]
+    total_average_crime_rate = [c.total_average_crime_rate for i, c, n in results]
+    number_of_restaurants = [n.number_of_restaurants for i, c, n in results]
+
+    data = [{
+        "neighbourhood" : neighbourhood,
+        "median_income" : median_income,
+        "average_income" : average_income,
+        "total_average_crime_rate" : total_average_crime_rate,
+        "number_of_restaurant" : number_of_restaurants
+    }]
+    
+    return jsonify(data)
 
 
 
