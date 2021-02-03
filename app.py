@@ -63,15 +63,15 @@ def get_ethnicity_data(neighbourhood):
 
     data_all = []
 
-    for item in results:
+    for result in results:
         data = {}
-        data['oceania_origins']=item[1]
-        data['asian_origins']=item[2]
-        data['north_american_aboriginal_origins']=item[3]
-        data['latin_origins']=item[4]
-        data['european_origins']=item[5]
-        data['african_origins']=item[6]
-        data['caribbean_origins']=item[6]
+        data['oceania_origins'] = result[1]
+        data['asian_origins'] = result[2]
+        data['north_american_aboriginal_origins'] = result[3]
+        data['latin_origins'] = result[4]
+        data['european_origins'] = result[5]
+        data['african_origins'] = result[6]
+        data['caribbean_origins'] = result[6]
         data_all.append(data)
     
     # Return the JSON representation of the dictionary
@@ -89,8 +89,7 @@ def get_restaurant_data(neighbourhood):
     
     pricerange_results = session.query(Restaurant.price_range, func.count(Restaurant.restaurant_name)).\
                     filter(func.lower(Restaurant.neighbourhood_name) == func.lower(neighbourhood)).\
-                    group_by(Restaurant.price_range).\
-                    order_by(func.count(Restaurant.price_range).asc()).all()        
+                    group_by(Restaurant.price_range).all()        
 
     session.close()
 
