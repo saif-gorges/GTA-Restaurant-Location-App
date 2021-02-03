@@ -48,46 +48,67 @@ def home():
 
 
 # Query the database and send the jsonified results
-@app.route("/send", methods=["GET", "POST"])
-def send():
-    if request.method == "POST":
-        name = request.form["petName"]
-        lat = request.form["petLat"]
-        lon = request.form["petLon"]
+@app.route('api/ethnicity/<neighbourhood>', methods=['GET'])
+def get_ethnicity_data(neighbourhood):
+    
+    sel = [Ethnicity.neighbourhood_name,
+            Ethnicity.oceania_origins,
+            Ethnicity.asian_origins,
+            Ethnicity.north_american_aboriginal_origins,
+            Ethnicity.other_north_american_origins,
+            Ethnicity.latin_origins,
+            Ethnicity.european_origins,
+            Ethnicity.african_origins,
+            Ethnicity.caribbean_origins]
 
-        pet = Pet(name=name, lat=lat, lon=lon)
-        db.session.add(pet)
-        db.session.commit()
-        return redirect("/", code=302)
+    results = session.query(*sel).filter(Ethnicity.neighbourhood_name == neighbourhood).all()
 
-    return render_template("form.html")
+    data_all = []
+
+    for item in results:
+        data = {}
+        data['neighbourhood'] = item[0]
+        data['oceania_origins']=item[1]
+        data['asian_origins']=item[2]
+        data['north_american_aboriginal_origins']=item[3]
+        data['latin_origins']=item[4]
+        data['european_origins']=item[5]
+        data['african_origins']=item[6]
+        data['caribbean_origins']=item[6]
+        data_all.append(data)
+    return jsonify(data_all)
 
 
-@app.route("/api/pals")
-def pals():
-    results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
 
-    hover_text = [result[0] for result in results]
-    lat = [result[1] for result in results]
-    lon = [result[2] for result in results]
 
-    pet_data = [{
-        "type": "scattergeo",
-        "locationmode": "USA-states",
-        "lat": lat,
-        "lon": lon,
-        "text": hover_text,
-        "hoverinfo": "text",
-        "marker": {
-            "size": 50,
-            "line": {
-                "color": "rgb(8,8,8)",
-                "width": 1
-            },
-        }
-    }]
 
-    return jsonify(pet_data)
+
+
+# @app.route("/api/pals")
+# def pals():
+#     results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
+
+#     hover_text = [result[0] for result in results]
+#     lat = [result[1] for result in results]
+#     lon = [result[2] for result in results]
+
+#     pet_data = [{
+#         "type": "scattergeo",
+#         "locationmode": "USA-states",
+#         "lat": lat,
+#         "lon": lon,
+#         "text": hover_text,
+#         "hoverinfo": "text",
+#         "marker": {
+#             "size": 50,
+#             "line": {
+#                 "color": "rgb(8,8,8)",
+#                 "width": 1
+#             },
+#         }
+#     }]
+
+#     return jsonify(pet_data)
 
 
 if __name__ == "__main__":
