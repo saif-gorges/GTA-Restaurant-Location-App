@@ -5,7 +5,7 @@ import os
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, func
 
 from flask import Flask, render_template, jsonify, request, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -33,10 +33,8 @@ Restaurant = Base.classes.restaurant
 NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
 YelpRatings = Base.classes.yelp_ratings
 
-
 # Create our session (link) from Python to the DB
 session = Session(engine)
-
 
 #################################################
 # Flask Routes
@@ -47,7 +45,6 @@ session = Session(engine)
 @app.route("/")
 def home():
     return render_template("index.html")
-
 
 # Query the database and send the jsonified results
 @app.route('/api/ethnicity/<neighbourhood>', methods=['GET'])
@@ -80,6 +77,52 @@ def get_ethnicity_data(neighbourhood):
         data_all.append(data)
     return jsonify(data_all)
 
+@app.route('/api/restaurant/<neighbourhood>', methods=['GET'])
+def get_restaurant_data(neighbourhood):
+
+    # sel = [YelpRatings.restaurant_name,
+    #         YelpRatings.category,
+    #         YelpRatings.ratings,
+    #         YelpRatings.review_counts,
+    #         YelpRatings.zip_code]
+
+    categories = session.query(Restaurant.category, func.count(Restaurant.restaurant_name)).\
+                filter(Restaurant.neighbourhood_name == neighbourhood).\
+                group_by(Restaurant.category).\
+                order_by(func.count(Restaurant.restaurant_name).desc()).limit(10)
+
+    data_all = []
+
+    for item in categories:
+        data = {}
+        data['category'] = item[0]
+        data['num_restaurants']=item[1]
+        data_all.append(data)
+
+    return jsonify(data_all)
+
+# @app.route('/api/crime', methods=['GET'])
+# def get_crime_data():
+    
+#     sel = [Crime.neighbourhood_name,
+#             Crime.total_average_crime_rate]
+
+#     results = session.query(*sel).filter(Ethnicity.neighbourhood_name == neighbourhood).all()
+
+#     data_all = []
+
+#     for item in results:
+#         data = {}
+#         data['neighbourhood'] = item[0]
+#         data['oceania_origins']=item[1]
+#         data['asian_origins']=item[2]
+#         data['north_american_aboriginal_origins']=item[3]
+#         data['latin_origins']=item[4]
+#         data['european_origins']=item[5]
+#         data['african_origins']=item[6]
+#         data['caribbean_origins']=item[6]
+#         data_all.append(data)
+#     return jsonify(data_all)
 
 
 
