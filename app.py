@@ -23,8 +23,6 @@ engine = create_engine('postgres://ssbhhlzo:ml3hJfrli7AgJRwhxx_nIHmSITfYYTz4@zig
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
-print(Base.classes.keys())
-
 # Save references to each table
 Income = Base.classes.income
 Crime = Base.classes.crime
@@ -33,8 +31,6 @@ Restaurant = Base.classes.restaurant
 NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
 YelpRatings = Base.classes.yelp_ratings
 
-# Create our session (link) from Python to the DB
-session = Session(engine)
 
 #################################################
 # Flask Routes
@@ -49,6 +45,8 @@ def home():
 # Query the database and send the jsonified results
 @app.route('/api/ethnicity/<neighbourhood>', methods=['GET'])
 def get_ethnicity_data(neighbourhood):
+    # Create a database session object
+    session = Session(engine)
     
     sel = [Ethnicity.neighbourhood_name,
             Ethnicity.oceania_origins,
@@ -61,6 +59,7 @@ def get_ethnicity_data(neighbourhood):
             Ethnicity.caribbean_origins]
 
     results = session.query(*sel).filter(Ethnicity.neighbourhood_name == neighbourhood).all()
+    session.close()
 
     data_all = []
 
@@ -75,10 +74,14 @@ def get_ethnicity_data(neighbourhood):
         data['african_origins']=item[6]
         data['caribbean_origins']=item[6]
         data_all.append(data)
+    
+    # Return the JSON representation of the dictionary
     return jsonify(data_all)
 
 @app.route('/api/restaurant/<neighbourhood>', methods=['GET'])
 def get_restaurant_data(neighbourhood):
+    # Create a database session object
+    session = Session(engine) 
 
     # sel = [YelpRatings.restaurant_name,
     #         YelpRatings.category,
@@ -90,6 +93,8 @@ def get_restaurant_data(neighbourhood):
                 filter(Restaurant.neighbourhood_name == neighbourhood).\
                 group_by(Restaurant.category).\
                 order_by(func.count(Restaurant.restaurant_name).desc()).limit(10)
+
+    session.close()
 
     data_all = []
 
