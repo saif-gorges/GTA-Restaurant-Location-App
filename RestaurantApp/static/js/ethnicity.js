@@ -1,5 +1,6 @@
 //Ethnicity BarChart
 
+//SVG Setting
 var svgWidth = 700;
 var svgHeight = 500;
 
