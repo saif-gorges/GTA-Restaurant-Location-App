@@ -80,29 +80,7 @@ d3.json(url).then(function(EthnicityData) {
 });
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
+/////////Plotly Version ---Just in Case----///////////// 
 //     //Set Values from Data
 
 //     var data = data;
@@ -125,15 +103,4 @@ d3.json(url).then(function(EthnicityData) {
 //     var caribbean = data.caribbean_origins;
     
 // });
-
-
-
-    
-
-
-
-
-
-
-
 
