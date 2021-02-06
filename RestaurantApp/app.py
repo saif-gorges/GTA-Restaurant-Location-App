@@ -71,7 +71,7 @@ def get_ethnicity_data(neighbourhood):
         data['latin_origins'] = result[4]
         data['european_origins'] = result[5]
         data['african_origins'] = result[6]
-        data['caribbean_origins'] = result[6]
+        data['caribbean_origins'] = result[7]
         data_all.append(data)
     
     # Return the JSON representation of the dictionary

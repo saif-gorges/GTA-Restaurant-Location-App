@@ -103,7 +103,7 @@ d3.json(url).then(function(data) {
   // xLinearScale function above json import
   var xLinearScale = xScale(data, chosenXAxis);
 
-  // Create y scal function
+  // Create y scale function
   var yLinearScale = d3.scaleLinear()
                 .domain([0, d3.max(data, d => d.number_of_restaurant)])
                 .range([height, 0]);
