@@ -12,8 +12,8 @@ var margin = {
   };
   
 // Define dimensions of the chart area
-var chartWidth = svgWidth - Margin.left - Margin.right;
-var chartHeight = svgHeight - Margin.top - Margin.bottom;
+var chartWidth = svgWidth - margin.left - margin.right;
+var chartHeight = svgHeight - margin.top - margin.bottom;
 
 // Select body, append SVG area to it, and set the dimensions
 var svg = d3.selectAll("#ethnicity-plot")
@@ -23,7 +23,7 @@ var svg = d3.selectAll("#ethnicity-plot")
 
 // Append a group to the SVG area and shift ('translate') it to the right and to the bottom
 var chartGroup = svg.append("g")
-  .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
+  .attr("transform", `translate(${margin.left}, ${chartmargin.top})`);
 
 
 // Load Data
