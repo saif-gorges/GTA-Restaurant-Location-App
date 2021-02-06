@@ -42,6 +42,11 @@ YelpRatings = Base.classes.yelp_ratings
 def home():
     return render_template("index.html")
 
+# TEST HTML
+@app.route("/saiftest")
+def saiftest():
+    return render_template("index saiftest.html")
+
 # Query the database and send the jsonified results
 @app.route('/api/ethnicity/<neighbourhood>', methods=['GET'])
 def get_ethnicity_data(neighbourhood):
