@@ -5,47 +5,46 @@ var myMap = L.map("map", {
   });
 console.log("Welcome to Map Creation")
 
-  //adding bounds to map object
-  var corner1 = L.latLng(43.70854, -79.36279),
-  corner2 = L.latLng(43.590095, -79.521849),
-  bounds = L.latLngBounds(corner1, corner2);
-  console.log(bounds)
+// Adding bounds to map object
+var corner1 = L.latLng(43.70854, -79.36279),
+corner2 = L.latLng(43.590095, -79.521849),
+bounds = L.latLngBounds(corner1, corner2);
+console.log(bounds)
 
-  // Adding tile layer
-  L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+// Adding tile layer
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+  attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     // tileSize: 512,
-    maxZoom: 11,
-    minZoom: 8,
+  maxZoom: 11,
+  minZoom: 8,
     // zoomOffset: -1,
-    id: "mapbox/streets-v11",
-    accessToken: API_KEY
+  id: "mapbox/streets-v11",
+  accessToken: API_KEY
   }).addTo(myMap);
     
-  //fixing map to bounds
-    myMap.fitBounds(bounds);
-    myMap.setMaxBounds(myMap.getBounds());
+  // Fixing map to bounds
+  myMap.fitBounds(bounds);
+  myMap.setMaxBounds(myMap.getBounds());
 
   // Use this link to get the geojson data.
-  var link = "/static/js/data/neighbourhoods.geojson";
-  console.log("Before geoJson function")
+ var link = "/static/data/neighbourhoods.geojson";
   // Grabbing our GeoJSON data..
-  d3.json(link, function(data) {
+ d3.json(link, function(data) {
     console.log("Inside function to grab geojson data")
-    // Creating a geoJSON layer with the retrieved data
-    L.geoJson(data, {
-      // Style each feature (in this case a neighborhood)
-      style: function(feature) {
-        return {
+  // Creating a geoJSON layer with the retrieved data
+  L.geoJSON(data, {
+  // Style each feature (in this case a neighborhood)
+  style: function(feature) {
+      return {
           color: "white",
           fillColor: "blue",
           fillOpacity: 0.5,
           weight: 1.5
-        };
+        }
       },
 
-      // Called on each feature
-      onEachFeature: function(feature, layer) {
+  // Called on each feature
+  onEachFeature: function(feature, layer) {
         // Set mouse events to change map styling
         layer.on({
           // When a user's mouse touches a map feature, the mouseover event calls this function, that feature's opacity changes to 90% so that it stands out
@@ -76,19 +75,19 @@ console.log("Welcome to Map Creation")
             // var url = `/api/neighbourhood_data/${neighbourhood}` 
             // d3.json(url).then(function(data) {
             //     console.log(data)
-            //     },
+            //     });
 
           // ethnicity
-        //     var eth_url = `/api/ethnicity/${neighbourhood}` 
-        //     d3.json(eth_url).then(function(data) {
-        //         console.log(neighbourhood)    
-        // },
-    }
+            var eth_url = `/api/ethnicity/${neighbourhood}` 
+            d3.json(eth_url).then(function(data) {
+                console.log(data)    
+        });
+              }      
         });
         // Giving each feature a pop-up with information pertinent to it
-        layer.bindPopup("<p>" + "Neighbourhood :"+ feature.properties.FIELD_7  + "</p>");
+        layer.bindPopup("<p>" + "Neighbourhood :"+ `${feature.properties.FIELD_7}`  + "</p>");
         //"</h1> <hr> <h2>" + feature.properties.FIELD_12 + feature.properties.FIELD_11
       }
-    }).addTo(myMap);
-  });
+    }).addTo(myMap)
+ });
   
