@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toronto Restaurant Location Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/d3Style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Toronto New Restaurant Location Analysis</h1>
+            <p>Where to open a new restaurant? Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. This dashboard gives an insight at restaurant data as well as neighbourhood information in Toronto. The goal of this analysis is to help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.</p>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <h2>Select a Neighbourhood in Toronto</h2>
+                <div id="map"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="scatter">
+                    <h2>Neighbourhood Information Overview</h2>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <h2>Restaurant Plot</h2>
+                <div id="restaurant-plot"></div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Ethnicity Plot</h2>
+                <div id="ethnicity-plot"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scatter.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app saifcopy.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/ethnicity.js') }}"></script>
+
+</body>
+
+</html>
