@@ -23,6 +23,14 @@
   cursor: pointer;
 }
 
+.bar {
+  fill: #e6d0ce;
+}
+
+.bar:hover {
+  fill:#89bdd3;
+}
+
 /* font size dependent on radius, see app.js */
 .stateText {
   font-family: sans-serif;
