@@ -23,9 +23,9 @@
                 <h2>Select a Neighbourhood in Toronto</h2>
                 <div id="map"></div>
             </div>
-            <div class="col-md-6">
-                <div id="scatter">
+            <div class="col-md-6">                
                     <h2>Neighbourhood Information Overview</h2>
+                    <div id="scatter"></div>
                 </div>
             </div>
         </div>
@@ -33,16 +33,19 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Restaurant Plot</h2>
+                <select id="select-plot">
+                    <option class="default" value='default'> -- select a plot -- </option>
+                </select>
                 <div id="restaurant-plot"></div>
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6">
                 <h2>Ethnicity Plot</h2>
                 <div id="ethnicity-plot"></div>
             </div>
-        </div>
+        </div>  -->
     </div>
 
 
@@ -53,10 +56,11 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script>-->
+    <script src="{{ url_for('static', filename='js/restaurant.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scatter.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/app saifcopy.js') }}"></script> -->
-    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/ethnicity.js') }}"></script>
+    
+    <!-- <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ethnicity.js') }}"></script> -->
 
 </body>
 

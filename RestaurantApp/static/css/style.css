@@ -1,14 +1,18 @@
 body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    /* padding-left: 100px;
+    padding-right: 100px; */
 }
 
-/* p {
-    font-size: 8px;
-} */
+h1 {
+    text-align: center;
+}
+
+
 body {
     padding: 0;
     margin: 0;
-  }
+}
 #map,
 body,
 html {
