@@ -16,7 +16,7 @@ function buildEthinicityPlot(neighbourhood) {
                   y: population,
                   type: 'bar',
                   marker: {
-                    color: '#ffd966',
+                    color: '#7268A6',
                     line: {width:1.0}
                     }
                   };
@@ -192,7 +192,7 @@ L.geoJSON(data, {
 style: function(feature) {
     return {
         color: "white",
-        fillColor: "blue",
+        fillColor: "#6B3074",
         fillOpacity: 0.5,
         weight: 1.5
       }
