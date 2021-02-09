@@ -15,11 +15,15 @@ d3.json(url).then(function(data) {
                 type: 'bar',
                 marker: {
                   color: '#ffd966',
-                  line: {width:1.0}
+                  line: {width:0.5}
                   }
                 };
 
     var layout = {
+      title: "Ethnicity Per Neighbourhood",
+      "titlefont": {
+        "size": 29,
+      },
       font: {size: 10},
       height: 700,
       width: 500,
@@ -31,7 +35,7 @@ d3.json(url).then(function(data) {
 
     var data = [trace];
 
-    Plotly.newPlot('ethnicity-plot', data, layout);
+    Plotly.newPlot('ethnicity-plot', data, layout, {displayModeBar: true});
 
 });
 
