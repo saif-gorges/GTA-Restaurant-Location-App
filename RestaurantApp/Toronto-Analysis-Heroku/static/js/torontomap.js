@@ -67,16 +67,6 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             neighbourhood = event.target.feature.properties.FIELD_7
             console.log(neighbourhood + " neighbourhood have been clicked");
 
-            // //remove existing graph
-            // chartGroup.selectAll('g').remove()
-            // chartGroup.selectAll('rect').remove()
-
-             //make api call to get data on neighbourhood
-            // var url = `/api/neighbourhood_data/${neighbourhood}` 
-            // d3.json(url).then(function(data) {
-            //     console.log(data)
-            //     });
-
           // make api call to post data on ethnicity
             var eth_url = `/api/ethnicity/${neighbourhood}`
             console.log(eth_url) 
