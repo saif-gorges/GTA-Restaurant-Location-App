@@ -1,7 +1,7 @@
 body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    padding-left: 150px;
-    padding-right: 150px;
+    /* padding-left: 150px;
+    padding-right: 150px; */
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 text-align: center;
 }
 p {
-font-size: 8px;
+font-size: 12px;
 color: rgb(19, 4, 87);
 }
-  
+
