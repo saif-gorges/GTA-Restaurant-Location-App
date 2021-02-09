@@ -32,7 +32,7 @@ d3.json(url).then(function(response) {
 
 // Cast the num_restaurants_pr value to a number for each piece of response
 response.forEach(function(d) {
-  d.num_restaurants_pr = +d.num_restaurants_pr;
+  var num_restaurants_pr = d.num_restaurants_pr;
 });
 
 // Configure a band scale for the horizontal axis with a padding of 0.1 (10%)

@@ -17,7 +17,7 @@ var chartWidth = svgWidth - chartMargin.left - chartMargin.right;
 var chartHeight = svgHeight - chartMargin.top - chartMargin.bottom;
 
 // Select body, append SVG area to it, and set the dimensions
-var svg = d3.select("#restaurant-plot")
+var svg = d3.select("#pricerange-plot")
   .append("svg")
   .attr("height", svgHeight)
   .attr("width", svgWidth);
@@ -27,7 +27,7 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
 
 // Load data from num_restaurants_ca-of-tv-watched.csv
-var url = '/api/category/annex'
+var url = '/api/pricerange/annex'
 d3.json(url).then(function(response) {
 
   console.log(response);
@@ -39,7 +39,7 @@ d3.json(url).then(function(response) {
 
   // Configure a band scale for the horizontal axis with a padding of 0.1 (10%)
   var xBandScale = d3.scaleBand()
-    .domain(response.map(d => d.category))
+    .domain(response.map(d => d.price_range))
     .range([0, chartWidth])
     .padding(0.1);
 
@@ -69,7 +69,7 @@ d3.json(url).then(function(response) {
                     .enter()
                     .append("rect")
                     .attr("class", "bar")
-                    .attr("x", d => xBandScale(d.category))
+                    .attr("x", d => xBandScale(d.price_range))
                     .attr("y", d => yLinearScale(d.num_restaurants))
                     .attr("width", xBandScale.bandwidth())
                     .attr("height", d => chartHeight - yLinearScale(d.num_restaurants))
@@ -87,13 +87,13 @@ d3.json(url).then(function(response) {
   chartGroup.append("text")
       .attr("transform", `translate(${chartWidth / 2}, ${chartHeight + chartMargin.top + 15})`)
       .attr("class", "active")
-      .text("Category");
+      .text("Price Range");
 
   var barToolTip = d3.tip()
     .attr("class", "d3-tip")
     .offset([0, 0])
     .html(function(d) {
-      return (`Category: ${d.category}<br>Number of Restaruants: ${d.num_restaurants}`)
+      return (`Price Range: ${d.price_range}<br>Number of Restaruants: ${d.num_restaurants}`)
     });
   barsGroup.call(barToolTip);
 
