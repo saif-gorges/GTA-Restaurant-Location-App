@@ -1,5 +1,5 @@
-var svgWidthScatter = 800;
-var svgHeightScatter = 650;
+var svgWidthScatter = 900;
+var svgHeightScatter = 800;
 
 var marginScatter = {
     top: 20,
@@ -182,6 +182,8 @@ d3.json(url).then(function(scatterData) {
         .attr("dy", "1em")
         .classed("active", true)
         .text("Number of Restaurants");
+
+    updateToolTip(chosenXAxis, circlesGroup)
 
     // updateToolTip function above json import
     // var circlesGroup = updateToolTip(chosenXAxis, circlesGroup);

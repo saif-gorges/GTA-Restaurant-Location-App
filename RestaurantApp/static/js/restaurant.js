@@ -1,7 +1,7 @@
 ////////////////////// restaurant plot //////////////////////////////
 
 // Define SVG area dimensions
-var svgWidth = 960;
+var svgWidth = 800;
 var svgHeight = 660;
 
 // Define the chart's margins as an object

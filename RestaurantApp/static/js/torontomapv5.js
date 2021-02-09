@@ -29,7 +29,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   // Use this link to get the geojson data.
  var link = "/static/data/neighbourhoods.geojson";
   // Grabbing our GeoJSON data..
- d3.json(link, function(data) {
+ d3.json(link).then(function(data) {
     console.log("Inside function to grab geojson data")
   // Creating a geoJSON layer with the retrieved data
   L.geoJSON(data, {
@@ -79,15 +79,20 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
           // ethnicity
             var eth_url = `/api/ethnicity/${neighbourhood}` 
+            console.log(eth_url)
             d3.json(eth_url).then(function(data) {
                 console.log(data)    
-        });
-              }      
+            });
+
+          }      
+
         });
         // Giving each feature a pop-up with information pertinent to it
         layer.bindPopup("<p>" + "Neighbourhood :"+ `${feature.properties.FIELD_7}`  + "</p>");
         //"</h1> <hr> <h2>" + feature.properties.FIELD_12 + feature.properties.FIELD_11
+
       }
     }).addTo(myMap)
  });
-  
+
+
