@@ -42,11 +42,6 @@ YelpRatings = Base.classes.yelp_ratings
 def home():
     return render_template("index-map.html")
 
-# TEST HTML
-# @app.route("/saiftest")
-# def saiftest():
-#     return render_template("index saiftest.html")
-
 # Query the database and send the jsonified results
 @app.route('/api/ethnicity/<neighbourhood>', methods=['GET'])
 def get_ethnicity_data(neighbourhood):
@@ -67,7 +62,6 @@ def get_ethnicity_data(neighbourhood):
     session.close()
 
     data_all = []
-
     for result in results:
         data = {}
         data['oceania_origins'] = result[1]
@@ -80,50 +74,53 @@ def get_ethnicity_data(neighbourhood):
         data['caribbean_origins'] = result[8]
         data_all.append(data)
     
+    
     # Return the JSON representation of the dictionary
     return jsonify(data_all)
 
-@app.route('/api/restaurant/<neighbourhood>', methods=['GET'])
-def get_restaurant_data(neighbourhood):
+@app.route('/api/category/<neighbourhood>', methods=['GET'])
+def get_category_data(neighbourhood):
     # Create a database session object
     session = Session(engine) 
 
-    category_results = session.query(Restaurant.category, func.count(Restaurant.restaurant_name)).\
+    results = session.query(Restaurant.category, func.count(Restaurant.restaurant_name)).\
                     filter(func.lower(Restaurant.neighbourhood_name) == func.lower(neighbourhood)).\
                     group_by(Restaurant.category).\
                     order_by(func.count(Restaurant.restaurant_name).desc()).limit(10)
     
-    pricerange_results = session.query(Restaurant.price_range, func.count(Restaurant.restaurant_name)).\
+    session.close()
+
+    data_all = []
+
+    for result in results:
+        data = {}
+        data['category'] = result[0]
+        data['num_restaurants'] = result[1]
+        data_all.append(data)
+    
+    return jsonify(data_all)
+
+@app.route('/api/pricerange/<neighbourhood>', methods=['GET'])
+def get_pricerange_data(neighbourhood):
+    # Create a database session object
+    session = Session(engine) 
+
+    results = session.query(Restaurant.price_range, func.count(Restaurant.restaurant_name)).\
                     filter(func.lower(Restaurant.neighbourhood_name) == func.lower(neighbourhood)).\
                     group_by(Restaurant.price_range).all()        
 
     session.close()
 
-    categories = [result[0] for result in category_results]
-    num_restaurants = [result[1] for result in category_results]
+    data_all = []
 
-    price_range = [result[0] for result in pricerange_results]
-    num_restaurants_pr = [result[1] for result in pricerange_results]
-
-    data = [
-    # Category
-    {
-        "category" : categories,   # Plot 1 - x axis
-        "num_restaurants_ca" : num_restaurants,   # Plot 1 - y axis value
-    # Price Range 
-        "price_range" : price_range,  # Plot 2 - x axis (multiple Xaxes)
-        "num_restaurants_pr" : num_restaurants_pr    # Plot 2 - y axis value
-    }]
+    for result in results:
+        data = {}
+        data['price_range'] = result[0]
+        data['num_restaurants'] = result[1]
+        data_all.append(data)
     
-    return jsonify(data)
+    return jsonify(data_all)
 
-    # for item in categories:
-    #     data = {}
-    #     data['category'] = item[0]
-    #     data['num_restaurants']=item[1]
-    #     data_all.append(data)
-
-    # return jsonify(data_all)
 
 @app.route('/api/scatterplotdata', methods=['GET'])
 def get_scatterplot_data():
@@ -134,8 +131,7 @@ def get_scatterplot_data():
     results = session.query(Income, Crime, NeighbourhoodRestaurant).\
             filter(Income.neighbourhood_id == Crime.neighbourhood_id).\
             filter(Income.neighbourhood_id == NeighbourhoodRestaurant.neighbourhood_id).all()
-
-    
+   
 
     data_all = []
 
