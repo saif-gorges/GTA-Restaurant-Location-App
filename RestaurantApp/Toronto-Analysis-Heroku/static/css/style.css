@@ -31,14 +31,28 @@ body {
   font-family: Arial;
   color: rgb(255, 255, 255);
   margin-top: 0px;
-  background-color: #218e96; 
+  background-color: #126066; 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   width: 1170px;
 }
-h1 {
-    text-align: center;
+ /* About */
+.about {
+  font-size: 18px;
+  font-family: Arial;
+  /* color: rgb(138, 16, 16); */
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-right: 30px;
+  background-color: #6B3074;
+  padding: 20px;
+}
+p {
+  font-size: 18px;
+  font-family: Arial;
+  color: #6B3074
 }
 
 #map,
@@ -53,10 +67,10 @@ height: 500px;
 h1 {
 text-align: center;
 }
-p {
+/* p {
 font-size: 12px;
 color: rgb(19, 4, 87);
-}
+} */
 /* h2{
   color: rgb(170, 51, 81);
 } */
