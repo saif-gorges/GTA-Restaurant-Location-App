@@ -18,7 +18,7 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-engine = create_engine('postgres://ssbhhlzo:ml3hJfrli7AgJRwhxx_nIHmSITfYYTz4@ziggy.db.elephantsql.com:5432/ssbhhlzo')
+engine = create_engine('postgres://njvrdjyvjmdbff:8574a3313def94cb7b048ef3496350a723d4ebcbb2ae1a709d66a79eab0112fe@ec2-54-211-77-238.compute-1.amazonaws.com:5432/d7ne1s21u49i5u')
 
 Base = automap_base()
 Base.prepare(engine, reflect=True)
@@ -29,7 +29,6 @@ Crime = Base.classes.crime
 Ethnicity = Base.classes.ethnicity
 Restaurant = Base.classes.restaurant
 NeighbourhoodRestaurant = Base.classes.neighbourhood_restaurant
-YelpRatings = Base.classes.yelp_ratings
 
 
 #################################################
