@@ -24,11 +24,12 @@
 }
 
 .bar {
-  fill: #e6d0ce;
+  fill: #7268A6;
+  opacity: 0.7;
 }
 
 .bar:hover {
-  fill:#89bdd3;
+  fill: #82b8ad;
 }
 
 /* font size dependent on radius, see app.js */

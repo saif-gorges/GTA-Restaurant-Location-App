@@ -17,6 +17,7 @@ function buildEthinicityPlot(neighbourhood) {
                   type: 'bar',
                   marker: {
                     color: '#7268A6',
+                    opacity: 0.9,
                     line: {width:1.0}
                     }
                   };
@@ -271,11 +272,17 @@ console.log(error);
   
 }
 
+// initial graphs
+var initialNeighbourhood = 'South Riverdale'
+buildEthinicityPlot(initialNeighbourhood)
+buildCategoryPlot(initialNeighbourhood)
+buildPriceRangePlot(initialNeighbourhood)
+
 
 // Creating map object
 var myMap = L.map("map", {
   center: [43.6532, -79.3832],
-  zoom: 9
+  zoom: 8
 });
 console.log("Welcome to Map Creation")
 
