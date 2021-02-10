@@ -1,1 +1,1 @@
-web: gunicorn RestaurantApp.app:Restaurant_Data_App
+web: gunicorn Toronto-Analysis-Heroku.app:app
