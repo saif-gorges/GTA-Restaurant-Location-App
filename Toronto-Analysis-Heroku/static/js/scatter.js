@@ -1,5 +1,5 @@
 var svgWidthScatter = 900;
-var svgHeightScatter = 800;
+var svgHeightScatter = 660;
 
 var marginScatter = {
     top: 20,
@@ -143,7 +143,7 @@ d3.json(url).then(function(scatterData) {
             .attr("cx", d => xLinearScaleSc(d[chosenXAxis]))
             .attr("cy", d => yLinearScaleSc(d.number_of_restaurants))
             .attr("r", 10)
-            .attr("fill", "#82b8ad")
+            .attr("fill", "#7268A6")
             .attr("opacity", ".7");
 
     // Create group for three x-axis labels

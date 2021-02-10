@@ -18,20 +18,40 @@
   line-height: 1.2;
 }
 body {
+    background-color: rgb(237, 237, 237);
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 14px;
-    /* background-image:url(Images/bacteria.png); */
-    background-repeat: no-repeat;
-    background-position: center;     
+    /* background-position: center;     
     background-size: cover;
-    line-height: 1.42857143;
-    color: rgb(255, 255, 255);      
+    line-height: 1.42857143;     */
 }
+
+/* navbar styling*/
+.navbar-brand {
+  margin-left: 10px;
+  color: white;
+  padding: 8px;
+  /* background-color: #684FA3; */
+  Font-Family: 'Bree Serif', Serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: #C1BBDD;
+  padding-top:0px;
+  padding-bottom: 0px;
+  
+}
+
+
+
 .title {
-  font-family: Arial;
+  /* Font-Family: 'Merriweather', Serif; */
+  Font-Family: 'Bree Serif', Serif;
   color: rgb(255, 255, 255);
   margin-top: 0px;
-  background-color: #126066; 
+  background-color: #82b8ad; 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -40,19 +60,36 @@ body {
  /* About */
 .about {
   font-size: 18px;
-  font-family: Arial;
+  Font-Family: 'Alegreya', Serif;
   /* color: rgb(138, 16, 16); */
   line-height: 1.7;
   text-align: justify;
   text-justify: inter-word;
   padding-right: 30px;
-  background-color: #6B3074;
+  /* background-color: #6B3074; */
   padding: 20px;
 }
 p {
   font-size: 18px;
-  font-family: Arial;
-  color: #6B3074
+  /* Font-Family: 'Muli', Sans-Serif; */
+  Font-Family: 'Alegreya', Serif;
+  color: gray;
+}
+
+h2{
+  font-size: 25px;
+  font-weight: bold;
+  color: #684FA3;
+  /* Font-Family: 'Merriweather', Serif; */
+  Font-Family: 'Bree Serif', Serif;
+}
+
+.plotsection {
+  padding-bottom: 20px;
+}
+
+.scattersection {
+  padding: 20px;
 }
 /* h2{
   color: rgb(0, 0, 0);
@@ -76,10 +113,10 @@ text-align: center;
     bottom: 0;
     left: 0;    
     padding: 15px;
-    background: #126066;
+    background: #684FA3;
     font-size: 15px;
     color: white;
-    font-family: Arial;
+    Font-Family: 'Muli', Sans-Serif;
     text-align: center;
 }
 /* p {

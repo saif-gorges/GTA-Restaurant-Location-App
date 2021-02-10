@@ -30,9 +30,20 @@
     <!-- Plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Bree+Serif" rel="stylesheet">
 </head>
 
 <body>
+
+        <!-- Navbar -->
+        <!-- <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <span class="navbar-brand text-purple mb-0 h1">Toronto Restuarant Location Analysis</span>
+            </div>
+          </nav> -->
+        <!-- Navbar Ends -->
 
     <div class="container">
         <div class="row">
@@ -44,31 +55,34 @@
         <hr>
     </div>
     <!-- Story -->
-    <div class="row">
-    <!-- <div class="col-md-6"> -->
-        <div>
+    <div class="col-md-12">
+        <div class="single-post-content-wrapper p-3">
           <p class="about"> 
         Where to open a new restaurant? Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. This dashboard gives an insight at restaurant data as well as neighbourhood information in Toronto. The goal of this analysis is to help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
          </p>
         </div>
     <!-- </div> -->
     </div>
-        <!--  -->
-        <div class="row">
+        <!-- first section -->
+        <div class="row plotsection">
             <div class="col-md-7">
                 <h2>Select a Neighbourhood in Toronto</h2>
+                <hr>
                 <div id="map"></div>
             </div>
             <div class="col-md-5">                
                     <h2>Ethnicity Plot</h2>
+                    <hr>
                     <div id="ethnicity-plot"></div>
                 </div>
         </div>
     
 
-        <div class="row">
+        <div class="row plotsection">
+
             <div class="col-md-6">
                 <h2>Restaurant Categories</h2>
+                <hr>
                 <!-- <select id="select-plot">
                     <option class="default" value='default'> -- select a plot -- </option>
                 </select> -->
@@ -76,17 +90,17 @@
             </div>
             <div class="col-md-6">                
                 <h2>Restaurant Price Ranges</h2>
+                <hr>
                 <div id="pricerange-plot"></div>
             </div>
         </div> 
 
-        <div class="row">
+        <div class="row scattersection">
             <div class="col-md-12">
-                <div class="col-md-5">                
-                    <h2>Neighbourhood Information Overview</h2>
-                    <div id="scatter"></div>
-                </div>
-            </div>
+                <h2>Neighbourhood Overview</h2>
+                <hr>
+                <div id="scatter"></div>
+             </div>
         </div>
     </div>
  <!-- Footer -->
@@ -105,8 +119,8 @@
     <script type="text/javascript" src="/static/js/app.js"></script>
     <!-- <script src="{{ url_for('static', filename='js/restaurant.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/scatter.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/ethnicity.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/pricerange.js') }}"></script> 
+    <!-- <script src="{{ url_for('static', filename='js/ethnicity.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pricerange.js') }}"></script>  -->
 
 </body>
 </html>

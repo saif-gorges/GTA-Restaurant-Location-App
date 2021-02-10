@@ -5,6 +5,7 @@
 }
 
 .active {
+  Font-Family: 'Alegreya', Serif;
   font-weight: bold;
   fill: #000;
   transition: fill 0.3s ease-out;
@@ -12,6 +13,7 @@
 }
 
 .inactive {
+  Font-Family: 'Alegreya', Serif;
   font-weight: lighter;
   fill: #c9c9c9;
   transition: fill 0.3s ease-out;
@@ -24,25 +26,15 @@
 }
 
 .bar {
-  fill: #e6d0ce;
+  fill: #7268A6;
+  opacity: 0.7;
 }
 
 .bar:hover {
-  fill:#89bdd3;
+  fill: #82b8ad;
 }
 
 /* font size dependent on radius, see app.js */
-.stateText {
-  font-family: sans-serif;
-  fill: #fff;
-  text-anchor: middle;
-}
-
-.stateCircle {
-  fill: #89bdd3;
-  stroke: #e3e3e3;
-}
-
 .chart {
   display: block;
   margin: 0;
