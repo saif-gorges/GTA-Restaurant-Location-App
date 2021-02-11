@@ -17,17 +17,41 @@ function buildEthinicityPlot(neighbourhood) {
                   type: 'bar',
                   marker: {
                     color: '#7268A6',
-                    opacity: 0.9,
-                    line: {width:1.0}
+                    opacity: 0.7
+                    // line: {width:1.0}
                     }
                   };
 
       var layout = {
+        title: {
+          text: `Ethnicity in ${neighbourhood}`,
+          font: {
+            family: 'Muli, Sans-Serif',
+            size: 20
+          }
+        },
         font: {size: 10},
-        height: 700,
+        height: 600,
         width: 500,
-        yaxis: {title : "Population"},
-        xaxis: {title : "Ethnicity", automargin: true},
+        yaxis: {
+          title : {
+            text: "Population",
+            font: {
+              family: 'Muli, Sans-Serif',
+              size: 15
+            }
+          }
+        },
+        xaxis: {
+          title : {
+            text: "Ethnicity",
+            font: {
+              family: 'Muli, Sans-Serif',
+              size: 15
+            }
+          },
+          automargin: true
+        },
         //automargin: true
         fixedrange: true
       }
@@ -46,7 +70,7 @@ function buildCategoryPlot(neighbourhood) {
     category.html("");
 
     // Define SVG area dimensions
-    var svgWidth = 560;
+    var svgWidth = 660;
     var svgHeight = 560;
 
     // Define the chart's margins as an object
@@ -119,6 +143,14 @@ function buildCategoryPlot(neighbourhood) {
                           .attr("width", xBandScale.bandwidth())
                           .attr("height", d => chartHeight - yLinearScale(d.num_restaurants))
 
+        // append chart title
+        chartGroup.append("text")
+            .attr("x", chartWidth / 2)
+            .attr("y", -15)
+            .style("text-anchor", "middle")
+            .classed("chartTitle", true)
+            .text(`Top 10 Categories in ${neighbourhood}`)
+
         // append y axis
         chartGroup.append("text")
             .attr("transform", "rotate(-90)")
@@ -159,7 +191,7 @@ function buildPriceRangePlot(neighbourhood) {
     var pricerange = d3.select("#pricerange-plot");
     pricerange.html("");
     // Define SVG area dimensions
-    var svgWidth = 560;
+    var svgWidth = 460;
     var svgHeight = 560;
 
     // Define the chart's margins as an object
@@ -231,6 +263,13 @@ function buildPriceRangePlot(neighbourhood) {
                         .attr("y", d => yLinearScale(d.num_restaurants))
                         .attr("width", xBandScale.bandwidth())
                         .attr("height", d => chartHeight - yLinearScale(d.num_restaurants))
+      // append chart title
+      chartGroup.append("text")
+      .attr("x", chartWidth / 2)
+      .attr("y", -15)
+      .style("text-anchor", "middle")
+      .classed("chartTitle", true)
+      .text(`Price Range in ${neighbourhood}`)
 
       // append y axis
       chartGroup.append("text")
