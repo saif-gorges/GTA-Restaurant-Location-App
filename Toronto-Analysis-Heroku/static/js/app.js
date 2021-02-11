@@ -58,7 +58,7 @@ function buildEthinicityPlot(neighbourhood) {
 
       var data = [trace];
 
-      Plotly.newPlot('ethnicity-plot', data, layout);
+      Plotly.newPlot('ethnicity-plot', data, layout, {displayModeBar: true});
   });
 }
 
