@@ -40,6 +40,11 @@
   fill: #82b8ad;
 }
 
+/* scatter grid */
+.axis-grid line {
+  stroke: #def;
+}
+
 /* font size dependent on radius, see app.js */
 .chart {
   display: block;

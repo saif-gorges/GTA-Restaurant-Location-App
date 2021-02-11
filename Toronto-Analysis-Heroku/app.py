@@ -148,5 +148,7 @@ def get_scatterplot_data():
     return jsonify(data_all)
 
 
+
+
 if __name__ == "__main__":
     app.run()

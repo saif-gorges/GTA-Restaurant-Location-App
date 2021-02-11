@@ -305,17 +305,38 @@ function buildPriceRangePlot(neighbourhood) {
 
 }).catch(function(error) {
 console.log(error);
+});  
 
-});
-
-  
 }
+
+function displayInfo(neighbourhood) {
+  url = '/api/scatterplotdata'
+  d3.json(url).then(function(infoData) {
+    var selected = infoData.filter(d => d.neighbourhood == neighbourhood)[0];
+    console.log(selected);
+
+    var panelBody = d3.select("#selected-info");
+
+    // To get the new panel with selected id data, clear the panel
+    panelBody.html("")
+
+    panelBody.append("h5").text(`${neighbourhood}`).append("hr")
+    // Use `Object.entries` and d3 to append <p> and update value per each key and value
+    Object.entries(selected).forEach( ([key, value]) => {
+      var row = panelBody.append("p");
+      row.text(`${key}: ${value}`);
+    });
+
+  });
+};
+
 
 // initial graphs
 var initialNeighbourhood = 'South Riverdale'
 buildEthinicityPlot(initialNeighbourhood)
 buildCategoryPlot(initialNeighbourhood)
 buildPriceRangePlot(initialNeighbourhood)
+displayInfo(initialNeighbourhood)
 
 
 // Creating map object
@@ -394,6 +415,8 @@ onEachFeature: function(feature, layer) {
           buildCategoryPlot(neighbourhood);
           //////////// Update Restaurant Price Range Bar Graph ////////////
           buildPriceRangePlot(neighbourhood);
+          //////////// Update Display Panel ////////////
+          displayInfo(neighbourhood);
 
         }      
 

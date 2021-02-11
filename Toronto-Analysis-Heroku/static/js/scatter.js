@@ -92,6 +92,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
   return circlesGroup;
 }
 
+
 var url = '/api/scatterplotdata'
 d3.json(url).then(function(scatterData) { 
     
@@ -124,6 +125,14 @@ d3.json(url).then(function(scatterData) {
     // Create initial axis functions
     var bottomAxisSc = d3.axisBottom(xLinearScaleSc);
     var leftAxisSc = d3.axisLeft(yLinearScaleSc);
+
+    // // append y axis grid
+    // var yAxisGrid = d3.axisLeft(yLinearScaleSc).tickSize(-widthScatter).tickFormat('').ticks(6);
+
+    // chartGroupScatter.append("g")
+    //             .attr('class', 'y axis-grid')
+    //             .call(yAxisGrid)
+    
  
     // append x axis
     var xAxisSc = chartGroupScatter.append("g")
@@ -134,6 +143,8 @@ d3.json(url).then(function(scatterData) {
     // append y axis
     chartGroupScatter.append("g")
                 .call(leftAxisSc);
+
+    
 
     // append initial circles
     var circlesGroup = chartGroupScatter.selectAll("circle")
