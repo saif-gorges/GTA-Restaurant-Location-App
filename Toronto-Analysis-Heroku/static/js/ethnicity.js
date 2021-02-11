@@ -20,10 +20,6 @@ d3.json(url).then(function(data) {
                 };
 
     var layout = {
-      title: "Ethnicity Per Neighbourhood",
-      "titlefont": {
-        "size": 29,
-      },
       font: {size: 10},
       height: 700,
       width: 500,
