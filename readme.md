@@ -31,16 +31,18 @@ In this project, we created a dashboard page with these transformed datasets: To
   * Restaurant Ratings & number of reviews - Yelp API
   
   ## <a name="data-visualization"></a>Data Visualization
-  * <a name="map"></a>Toronto Neighbourhood Map
+  ### [1] <a name="map"></a>Toronto Neighbourhood Map 
+  * A interactive graphic was created using the D3 techniques, It shows the correlation between the number of restaurants in Toronto and Average/Median income rate and Average Crime rate. Scatter Plot represents each neighbourhood with tooltips. \
+  
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
-  * <a name="interactive-map"></a>Toronto Neighbourhood Overview
+  ### [2] <a name="interactive-map"></a>Toronto Neighbourhood Overview 
   ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif)
   
-  * <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood
+  ### [3] <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood 
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
   
-  * <a name="restaurant2"></a>Toronto Restaurant Categories and Price Range 
+  ### [4] <a name="restaurant2"></a>Toronto Restaurant Categories and Price Range 
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
   
   
