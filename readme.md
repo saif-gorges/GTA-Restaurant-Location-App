@@ -61,7 +61,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   ![final2](./Toronto-Analysis-Heroku/static/css/Images/final2.JPG)
   
  ## Over All layout
-![data journalism ](./Toronto-Analysis-Heroku/static/css/Images/Project_Full.gif)
+![project overall](./Toronto-Analysis-Heroku/static/css/Images/Project_Full.gif)
 
  ## Deployment
  This app is deployed public on Heroku App, click the following link to see how it looks like [Toronto Metrics](https://bootcamp-gta-restaurant-app.herokuapp.com/)
