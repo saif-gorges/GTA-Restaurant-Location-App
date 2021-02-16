@@ -14,7 +14,7 @@ Visualization Project- **Toronto Restaurant Data Application** <br/>
     * [Toronto Neighbourhood Overview](#interactive-map)
     * [Ethinicty](#ethnicity)
     * [Restaurant Categories and Price Range ](#restaurant2)
-  * [Fianl Proposal](#final-proposal)
+  * [Final Proposal](#final-proposal)
 
 ## <a name="overview"></a>Overview
 What are the best neighbourhoods in Toronto to open up a restaurant business? Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. Our goal for this project is to create a dashboard page with multiple interactive graphs and maps that gives an insight at restaurant data as well as neighbourhood information in Toronto. The dashboard would help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
