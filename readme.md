@@ -4,7 +4,7 @@
 _Date_: February, 18th, 2021\
 Visualization Project- **Toronto Restaurant Data Application** <br/>
 
-![Toronto readme](./Toronto-Analysis-Heroku/static/css/Images/toronto_readme1.jpg)
+![Toronto readme](./Toronto-Analysis-Heroku/static/css/Images/toronto_readme.jpg)
 
 ## Table of Contents
   * [Introduction](#introduction)
