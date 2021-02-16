@@ -30,7 +30,7 @@ Based on: </br>
 ## <a name="data-sources"></a>Data Sources
 In this project, we created a dashboard page with these transformed datasets: Toronto Neighbourhood, Income, Crime, Toronto Restaurants Data, Restaurants Ratings. 
  
- * Datasets Sources:   
+ Datasets Sources:   
   * Toronto Neighbourhood Data - Toronto City Open Data
   * Toronto Neighbourhood Income - Toronto City Open Data
   * Toronto Crime Data - Toronto City Open Data
