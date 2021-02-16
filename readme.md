@@ -38,7 +38,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ### [2] <a name="interactive-map"></a>Toronto Neighbourhood Overview 
   * A interactive graphic was created using the D3 techniques, It shows the correlation between the number of restaurants in Toronto and Average/Median income rate and Average Crime rate. Scatter Plot represents each neighbourhood with tooltips. Selected neighbourhood information(Average/Median income, Crime rate) is displayed on Panel.
-  ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) ![panel](./Toronto-Analysis-Heroku/static/css/Images/panel.jpg)
+  ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) ![panel](./Toronto-Analysis-Heroku/static/css/Images/pannel.jpg)
   
   ### [3] <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood 
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
