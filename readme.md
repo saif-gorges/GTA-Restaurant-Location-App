@@ -41,6 +41,15 @@ In this project, we created a dashboard page with these transformed datasets: To
   ## <a name="data-sources"></a> Architectural Diagram
   ![Toronto readme1](./Toronto-Analysis-Heroku/static/css/Images/Data_architecture.JPG)
   
+  ## 🔭 ETL Process
+  ### Extract
+  Data sourced from
+  ### Transform
+  Data cleaned and transformed by using Python Jupyter Notebook.
+  ### Load
+  - This project used Python Jupyter Notebook to load transformed data in to PostgreSQL database.
+  - Python Flask–powered RESTful API were used to deploy the data into the web, and API end point links created. API links store our cleaned and transformed data in json format and are publicly accessible for visitors of our website.
+  
   ## <a name="data-visualization"></a>Data Visualization
   ### [1] <a name="map"></a>Toronto Neighbourhood Map 
   * A Toronto Neighbourhood Geomap was created using Leaflet. Other graphs which give restaurant data as well as neighbourhood information in Toronto are connected to this core map. The user picks a nighbourhood by clicking on a map.   
