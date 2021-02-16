@@ -78,8 +78,10 @@ In this project, we created a dashboard page with these transformed datasets: To
   - They have comparitively very low number of restaurants than other neighbourhoods at 4 and 15 respectively.
   - The Crime Rate in these neighbourhoods is very low making them a safer option.
   Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines.
-  If you further drill down for Bridle Path Sunnybrook York Mills 
-  for Lawrence PArk South, 
+  If you further drill down 
+  - for Bridle Path Sunnybrook York Mills, since there are few restaurants with only four options as Burgers, Cafes, Seafood and Breakfast and Brunch,
+  once can open new restaurants with different theme.
+  - for Lawrence Park South, japanese and italian restaurants
   
   ## <a name="final-proposal"></a>Fianl Proposal
   * The final proposal is deployed through the Heroku.
