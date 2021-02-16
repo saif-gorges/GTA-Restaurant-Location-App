@@ -43,7 +43,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## <a name="data-visualization"></a>Data Visualization
   ### [1] <a name="map"></a>Toronto Neighbourhood Map 
-  * A Toronto Neighbourhood Geomap was created using Leaflet, other graphs which give restaurant data as well as neighbourhood information in Toronto are connected to this core map. The user picks a nighbourhood by clicking on a map.   
+  * A Toronto Neighbourhood Geomap was created using Leaflet. Other graphs which give restaurant data as well as neighbourhood information in Toronto are connected to this core map. The user picks a nighbourhood by clicking on a map.   
   
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
