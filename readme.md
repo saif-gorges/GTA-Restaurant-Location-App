@@ -52,7 +52,8 @@ In this project, we created a dashboard page with these transformed datasets: To
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
   
   ## <a name="final-proposal"></a>Fianl Proposal
-  * The final proposal is deployed through the Heroku. 
+  * The final proposal is deployed through the Heroku.
+  
   ![final1](./Toronto-Analysis-Heroku/static/css/Images/final1.JPG)
   ![final2](./Toronto-Analysis-Heroku/static/css/Images/final2.JPG)
   
