@@ -10,10 +10,10 @@ Visualization Project- **Toronto Restaurant Data Application** <br/>
   * [Overview](#overview)
   * [Data Sources](#data-sources)
   * [Data Visualization](#data-visualization)
-   * [Toronto Neighbourhood Map](#map)
-   * [Toronto Neighbourhood Overview](#interactive-map)
-   * [Ethinicty](#ethnicity)
-   * [Restaurant Categories and Price Range ](#restaurant2)
+    * [Toronto Neighbourhood Map](#map)
+    * [Toronto Neighbourhood Overview](#interactive-map)
+    * [Ethinicty](#ethnicity)
+    * [Restaurant Categories and Price Range ](#restaurant2)
   * [Fianl Proposal](#final-proposal)
 
 ## <a name="overview"></a>Overview
@@ -34,13 +34,13 @@ In this project, we created a dashboard page with these transformed datasets: To
   * <a name="map"></a>Toronto Neighbourhood Map
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
-  * Toronto Neighbourhood Overview
+  * <a name="interactive-map"></a>Toronto Neighbourhood Overview
   ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif)
   
-  * Totonro Ethinicty in Each Neighbourhood
+  * <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
   
-  * Toronto Restaurant Categories and Price Range 
+  * <a name="restaurant2"></a>Toronto Restaurant Categories and Price Range 
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
   
   
