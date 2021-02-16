@@ -39,7 +39,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   ### [2] <a name="interactive-map"></a>Toronto Neighbourhood Overview 
   * A interactive scatter plot was created using the D3 techniques, It displays Average, Median Income and Average Crime Rate for all neighbourhoods in Toronto and corresponding number of restaurants. Furthermore, Selected neighbourhood information(Average/Median income, Crime rate) is displayed on Panel.
   
-  ![panel](./Toronto-Analysis-Heroku/static/css/Images/pannel.jpg) ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) 
+  ![panel](./Toronto-Analysis-Heroku/static/css/Images/panel.jpg) ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) 
   
   ### [3] <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood 
   * The selected neighbourhood information from Toronto Geomap is passed into the ethnicity. The Toronto Ethnicity Barchart is created and annotated from API calls with labels, text and hover information. Bar graph represents the ethnicity of each region in Toronto. 
@@ -53,7 +53,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## <a name="final-proposal"></a>Fianl Proposal
   * The final proposal is deployed through the Heroku. 
-  ![final1](./Toronto-Analysis-Heroku/static/css/Images/final1.jpg)
-  ![final2](./Toronto-Analysis-Heroku/static/css/Images/final2.jpg)
+  ![final1](./Toronto-Analysis-Heroku/static/css/Images/final1.JPG)
+  ![final2](./Toronto-Analysis-Heroku/static/css/Images/final2.JPG)
   
  
