@@ -10,6 +10,10 @@ Visualization Project- **Toronto Restaurant Data Application** <br/>
   * [Overview](#overview)
   * [Data Sources](#data-sources)
   * [Data Visualization](#data-visualization)
+   * [Toronto Neighbourhood Map](#map)
+   * [Toronto Neighbourhood Overview](#interactive-map)
+   * [Ethinicty](#ethnicity)
+   * [Restaurant Categories and Price Range ](#restaurant2)
   * [Fianl Proposal](#final-proposal)
 
 ## <a name="overview"></a>Overview
@@ -27,7 +31,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   * Restaurant Ratings & number of reviews - Yelp API
   
   ## <a name="data-visualization"></a>Data Visualization
-  * Toronto Neighbourhood Map
+  * <a name="map"></a>Toronto Neighbourhood Map
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
   * Toronto Neighbourhood Overview
