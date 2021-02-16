@@ -77,7 +77,9 @@ In this project, we created a dashboard page with these transformed datasets: To
   - Both neighbourhoods have the highest Average Income, Median Income.
   - They have comparitively very low number of restaurants than other neighbourhoods at 4 and 15 respectively.
   - The Crime Rate in these neighbourhoods is very low making them a safer option.
-  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins.
+  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines.
+  If you further drill down for Bridle Path Sunnybrook York Mills 
+  for Lawrence PArk South, 
   
   ## <a name="final-proposal"></a>Fianl Proposal
   * The final proposal is deployed through the Heroku.
