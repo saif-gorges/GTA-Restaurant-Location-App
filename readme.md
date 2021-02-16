@@ -32,13 +32,14 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## <a name="data-visualization"></a>Data Visualization
   ### [1] <a name="map"></a>Toronto Neighbourhood Map 
-  * A interactive graphic was created using the D3 techniques, It shows the correlation between the number of restaurants in Toronto and Average/Median income rate and Average Crime rate. Scatter Plot represents each neighbourhood with tooltips. 
+  * A Toronto Neighbourhood Geomap was created using Leaflet, other graphs which give restaurant data as well as neighbourhood information in Toronto are connected to this core map. The user could pick a nighbourhood by clicking on a map.   
   
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
   ### [2] <a name="interactive-map"></a>Toronto Neighbourhood Overview 
   * A interactive graphic was created using the D3 techniques, It shows the correlation between the number of restaurants in Toronto and Average/Median income rate and Average Crime rate. Scatter Plot represents each neighbourhood with tooltips. Selected neighbourhood information(Average/Median income, Crime rate) is displayed on Panel.
-  ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) ![panel](./Toronto-Analysis-Heroku/static/css/Images/pannel.jpg)
+  
+  ![panel](./Toronto-Analysis-Heroku/static/css/Images/pannel.jpg) ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) 
   
   ### [3] <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood 
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
