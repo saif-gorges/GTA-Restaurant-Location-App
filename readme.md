@@ -19,6 +19,14 @@ Visualization Project- **Toronto Restaurant Data Application** <br/>
 ## <a name="overview"></a>Overview
 What are the best neighbourhoods in Toronto to open up a restaurant business? Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. Our goal for this project is to create a dashboard page with multiple interactive graphs and maps that gives an insight at restaurant data as well as neighbourhood information in Toronto. The dashboard would help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
 
+## Research Question
+What are the best neighbourhoods in Toronto to open up a restaurant business?
+Based on:
+Ethnicity of Population per neighbourhood
+Competition for a given Restaurant Category per neighbourhood
+Distribution of Price Range per neighbourhood
+Average/Median Income, Average Crime Rate for all Neighbourhoods in Toronto and corresponding Number of Restaurants.
+
 ## <a name="data-sources"></a>Data Sources
 In this project, we created a dashboard page with these transformed datasets: Toronto Neighbourhood, Income, Crime, Toronto Restaurants Data, Restaurants Ratings. 
  
@@ -53,6 +61,9 @@ In this project, we created a dashboard page with these transformed datasets: To
   * The selected neighhourhood information is also passed into the price range routes which will then run a query to the PostgreSQL Database via SQLAlchemy to fetch their corresponding data for the neighbourhood selected on the map. The data returned was used to generate a D3 barchart for Category--Restaurant Number and for Price Range--Restaurant Number.
   
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
+  
+  ## Data Analysis
+  
   
   ## <a name="final-proposal"></a>Fianl Proposal
   * The final proposal is deployed through the Heroku.
