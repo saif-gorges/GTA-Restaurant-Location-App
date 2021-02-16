@@ -72,7 +72,10 @@ In this project, we created a dashboard page with these transformed datasets: To
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
   
   ## Data Analysis
-  
+  - Neighbourhood like Bridle Path Sunnybrook York Mills have the highest Average Income, Median Income but have comparitively low number of restaurants than other neighbourhoods. So this neighbourhood is one of the potential place to open up a restaurant.
+  - Most neighbourhoods have high population of european origins followed by asian origins.
+  - Moss Park has the highest average crime rate as compared to other neighbourhoods.
+  - Kensington Chinatown has the most number of restaurants - 280
   
   ## <a name="final-proposal"></a>Fianl Proposal
   * The final proposal is deployed through the Heroku.
