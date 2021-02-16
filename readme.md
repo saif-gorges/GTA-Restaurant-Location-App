@@ -30,7 +30,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   * Toronto Restaurant Data - Kaggle
   * Restaurant Ratings & number of reviews - Yelp API
   
-  ## <a name="data-sources"></a> Data Architecture
+  ## <a name="data-sources"></a> Architectural Diagram
   ![Toronto readme1](./Toronto-Analysis-Heroku/static/css/Images/Data_architecture.JPG)
   
   ## <a name="data-visualization"></a>Data Visualization
