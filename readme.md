@@ -43,7 +43,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## 🔭 ETL Process
   ### Extract
-  Data sourced from[Toronto data](https://open.toronto.ca/dataset/neighbourhood-profiles/)
+  Data sourced from [Toronto data](https://open.toronto.ca/dataset/neighbourhood-profiles/) for the City's 140 neighbourhoods highlighting Average and Median Income, Average     Crime Rate and Ethnicity.
   ### Transform
   Data cleaned and transformed by using Python Jupyter Notebook - [Transform.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Transform.ipynb)
   ### Load
