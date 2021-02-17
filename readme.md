@@ -65,7 +65,8 @@ In this project, we created a dashboard page with these transformed datasets: To
   ![map](./Toronto-Analysis-Heroku/static/css/Images/map.gif)
   
   ### [2] <a name="interactive-map"></a>Toronto Neighbourhood Overview 
-  * A interactive scatter plot was created using the D3 techniques, It displays Average, Median Income and Average Crime Rate for all neighbourhoods in Toronto and corresponding number of restaurants. Furthermore, Selected neighbourhood information(Average/Median income, Crime rate) is displayed on Panel.
+  * A interactive scatter plot was created using the D3 techniques, It displays Average, Median Income and Average Crime Rate for all neighbourhoods in Toronto and corresponding number of restaurants. The data was pulled by using sqlalchemy and the d3.json function. Additional labels were added in the scatter plot and click events were given to them so that the users can decide which data to display. The transitions for the circles' locations as well as the range of the x axis was animated. Three labels for each axis were created. Tooltips were added to the circles and each tooltip with the data that the user has selected will be displayed. 
+ Furthermore, Selected neighbourhood information(Average/Median income, Crime rate) is displayed on Panel.
   
   ![panel](./Toronto-Analysis-Heroku/static/css/Images/panel.jpg) ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) 
   
