@@ -23,11 +23,14 @@ What are the best neighbourhoods in Toronto to open up a restaurant business? To
 What are the best neighbourhoods in Toronto to open up a restaurant business? </br>
 Based on: </br>
 - Ethnicity of Population per neighbourhood </br>
-  Another factor that can help in deciding which neighborhood would be the best option to open a restaurant is, the distribution of population based on the ethnic diversity for   each neighborhood. As this helps us in identifying the neighborhoods which are densely populated with which ethnicity crowd since that neighborhood would be an ideal place to   open a restaurant.
+  Factor that can help in deciding which neighborhood would be the best option to open a restaurant is, the distribution of population based on the ethnic diversity for each     neighborhood. As this helps us in identifying the neighborhoods which are densely populated with which ethnicity crowd since that neighborhood would be an ideal place to       open a restaurant.
 - Competition for a given Restaurant Category per neighbourhood </br>
-  Another deciding factor is a restaurant category to open a new restaurant with different theme/category.
+  Another deciding factor is a restaurant category, to open a new restaurant with different theme/category and identify which category has the most number of restaurants i.e.     high occurences for the selected neighbourhood.
 - Distribution of Price Range per neighbourhood </br>
+  We can also analyse the price range for the number of restaurants in the selected neighbourhood.
 - Average/Median Income, Average Crime Rate for all Neighbourhoods in Toronto and corresponding Number of Restaurants.
+  We can analyse each neighbourhood's Average Income and Crime Rate and Number of Restaurants which will help us find ideal location to invest in a restaurant by choosing low     crime rate and less number of restaurants to wipe out the competition and be ahead of the game.
+  
 
 ## <a name="data-sources"></a>Data Sources
 In this project, we created a dashboard page with these transformed datasets: Toronto Neighbourhood, Income, Crime, Toronto Restaurants Data, Restaurants Ratings. 
@@ -75,7 +78,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## Data Analysis
   Neighbourhoods like Bridle Path Sunnybrook York Mills and Lawrence Park South are the optimal places/neighbourhoods to open up a restaurant.
-  For the following reasons:
+  supporting reasons:
   - Both neighbourhoods have the highest Average Income, Median Income.
   - They have comparitively very low number of restaurants than other neighbourhoods at 4 and 15 respectively.
   - The Crime Rate in these neighbourhoods is very low making them a safer option. </br>
