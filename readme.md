@@ -76,7 +76,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
   
   ### [4] <a name="restaurant2"></a>Toronto Restaurant Categories and Price Range 
-  * The selected neighhourhood information is also passed into the price range routes which will then run a query to the PostgreSQL Database via SQLAlchemy to fetch their corresponding data for the neighbourhood selected on the map.  Using filter, groupby, orderby, and count functions, this bar graph shows the top 10 categories in a community and the number of restaurants. The data returned was used to generate a D3 barchart for Category--Restaurant Number and for Price Range--Restaurant Number. 
+  * The selected neighhourhood information is also passed into the price range routes which will then run a query to the PostgreSQL Database via SQLAlchemy to fetch their corresponding data for the neighbourhood selected on the map.  Using filter, groupby, orderby, and count functions, this bar graph shows the top 10 categories in a community and the number of restaurants. The data returned was used to generate a D3 barchart for Category--Restaurant Number and for Price Range--Restaurant Number. Tooltips were added to the bars, and each tooltip with the data that the user has selected will be displayed. 
   
   ![restaurant1](./Toronto-Analysis-Heroku/static/css/Images/restaurant1.gif)
   
