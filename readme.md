@@ -18,6 +18,7 @@ Find the completed Toronto New Restaurant Analysis dashboard here: [Toronto New 
     * [Ethinicty](#ethnicity)
     * [Restaurant Categories and Price Range ](#restaurant2)
   * [Final Proposal](#final-proposal)
+  * [Technologies](#technologies)
 
 ## <a name="overview"></a>Overview
 What are the best neighbourhoods in Toronto to open up a restaurant business? Toronto, the capital of the province of Ontario, is the most populous Canadian city. Its diversity is reflected in Toronto’s ethnic neighborhoods such as Chinatown, Corso Italia, Greektown, Kensington Market, Koreatown, Little India, Little Italy, Little Jamaica, Little Portugal & Roncesvalles. Since we already know that Toronto shelters a greater number of ethnicity than any other city in Canada, it is a good idea to start the restaurant here, but we just need to make sure whether it is a profitable idea or not. If so, where we can place it, so it yields more profit to the owner. Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. Our goal for this project is to create a dashboard page with multiple interactive graphs and maps that gives an insight at restaurant data as well as neighbourhood information in Toronto. The dashboard would help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
@@ -105,7 +106,7 @@ In this project, we created a dashboard page with these transformed datasets: To
  This app is deployed public on Heroku App, click the following link to see how it looks like [Toronto Metrics](https://bootcamp-gta-restaurant-app.herokuapp.com/)
  
  
-## Technologies
+## <a name="technologies">Technologies</a>
 This project was created with:
 * JavaScript
 * HTML/CSS
