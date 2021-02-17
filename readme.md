@@ -23,6 +23,7 @@ What are the best neighbourhoods in Toronto to open up a restaurant business? To
 What are the best neighbourhoods in Toronto to open up a restaurant business? </br>
 Based on: </br>
 - Ethnicity of Population per neighbourhood </br>
+  Another factor that can help in deciding which neighborhood would be the best option to open a restaurant is, the distribution of population based on the ethnic diversity for   each neighborhood. As this helps us in identifying the neighborhoods which are densely populated with which ethnicity crowd since that neighborhood would be an ideal place to   open a restaurant.
 - Competition for a given Restaurant Category per neighbourhood </br>
 - Distribution of Price Range per neighbourhood </br>
 - Average/Median Income, Average Crime Rate for all Neighbourhoods in Toronto and corresponding Number of Restaurants.
@@ -45,7 +46,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   ### Extract
   Data sourced from [Toronto data](https://open.toronto.ca/dataset/neighbourhood-profiles/) for the City's 140 neighbourhoods highlighting Average and Median Income, Average     Crime Rate and Ethnicity.
   ### Transform
-  Data cleaned and transformed by using Python Jupyter Notebook - [Transform.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Transform.ipynb)
+  Data cleaned and transformed by using Python Jupyter Notebook - [Transform.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Transform.ipynb).
   ### Load
   - This project used Python Jupyter Notebook to load transformed data in to PostgreSQL database - [Load.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Load.ipynb)
   - Python Flask–powered RESTful API were used to deploy the data into the web, and API end point links created. API links store our cleaned and transformed data in json format and are publicly accessible for visitors of our website.
@@ -77,7 +78,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   - Both neighbourhoods have the highest Average Income, Median Income.
   - They have comparitively very low number of restaurants than other neighbourhoods at 4 and 15 respectively.
   - The Crime Rate in these neighbourhoods is very low making them a safer option.
-  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines.
+  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines     which gives a higher number of customers possibility and lower competition.
   If you further drill down 
   - for Bridle Path Sunnybrook York Mills, since there are few restaurants with only four options as Burgers, Cafes, Seafood and Breakfast and Brunch,
   once can open new restaurants with different theme.
