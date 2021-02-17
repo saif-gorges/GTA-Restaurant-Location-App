@@ -1,4 +1,4 @@
-# Toronto Restaurant Data Application
+# Exploring Toronto Neighborhoods - to open a new Restaurant
 
 **Submitted By:** Dong Yi Kim | Saif Gorges | Saloni Gupta | Sooyeon Kim </br>
 _Date_: February, 18th, 2021\
