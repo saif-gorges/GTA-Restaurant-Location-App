@@ -17,7 +17,7 @@ Visualization Project- **Toronto Restaurant Data Application** <br/>
   * [Final Proposal](#final-proposal)
 
 ## <a name="overview"></a>Overview
-What are the best neighbourhoods in Toronto to open up a restaurant business? Toronto, the capital of the province of Ontario, is the most populous Canadian city. Its diversity is reflected in Toronto’s ethnic neighborhoods such as Chinatown, Corso Italia, Greektown, Kensington Market, Koreatown, Little India, Little Italy, Little Jamaica, Little Portugal & Roncesvalles. Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. Our goal for this project is to create a dashboard page with multiple interactive graphs and maps that gives an insight at restaurant data as well as neighbourhood information in Toronto. The dashboard would help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
+What are the best neighbourhoods in Toronto to open up a restaurant business? Toronto, the capital of the province of Ontario, is the most populous Canadian city. Its diversity is reflected in Toronto’s ethnic neighborhoods such as Chinatown, Corso Italia, Greektown, Kensington Market, Koreatown, Little India, Little Italy, Little Jamaica, Little Portugal & Roncesvalles. Since we already know that Toronto shelters a greater number of ethnicity than any other city in Canada, it is a good idea to start the restaurant here, but we just need to make sure whether it is a profitable idea or not. If so, where we can place it, so it yields more profit to the owner. Choosing a new restaurant location is the most important, at the same time, the most difficult decision throughout the whole process. Our goal for this project is to create a dashboard page with multiple interactive graphs and maps that gives an insight at restaurant data as well as neighbourhood information in Toronto. The dashboard would help new restaurant owners decide as to where the best placement of a new restaurant could be considering ethnicity, local competition, income and crime rate per neighborhood to help determine whether a restaurant could potentially be profitable or not for each neighborhood.
 
 ## Research Question
 What are the best neighbourhoods in Toronto to open up a restaurant business? </br>
@@ -25,6 +25,7 @@ Based on: </br>
 - Ethnicity of Population per neighbourhood </br>
   Another factor that can help in deciding which neighborhood would be the best option to open a restaurant is, the distribution of population based on the ethnic diversity for   each neighborhood. As this helps us in identifying the neighborhoods which are densely populated with which ethnicity crowd since that neighborhood would be an ideal place to   open a restaurant.
 - Competition for a given Restaurant Category per neighbourhood </br>
+  Another deciding factor is a restaurant category to open a new restaurant with different theme/category.
 - Distribution of Price Range per neighbourhood </br>
 - Average/Median Income, Average Crime Rate for all Neighbourhoods in Toronto and corresponding Number of Restaurants.
 
