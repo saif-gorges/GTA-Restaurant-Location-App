@@ -77,9 +77,9 @@ In this project, we created a dashboard page with these transformed datasets: To
   For the following reasons:
   - Both neighbourhoods have the highest Average Income, Median Income.
   - They have comparitively very low number of restaurants than other neighbourhoods at 4 and 15 respectively.
-  - The Crime Rate in these neighbourhoods is very low making them a safer option.
-  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines     which gives a higher number of customers possibility and lower competition.
-  If we further drill down 
+  - The Crime Rate in these neighbourhoods is very low making them a safer option. </br>
+  Additionally, we can also see that both these neighbourhoods are highly populated with european origins followed by asian origins, ideal for opening similar ethnic cuisines     which gives a higher number of customers possibility and lower competition. </br>
+  If we further drill down </br>
   - for Bridle Path Sunnybrook York Mills, since there are few restaurants with only four options as Burgers, Cafes, Seafood and Breakfast and Brunch,
    so there are vast options to open new restaurant with different theme/category.
   - for Lawrence Park South, there are 4 japanese and 3 italian restaurants, so there are other options to open new restaurant with different theme/category.
