@@ -74,6 +74,14 @@ d3.json(url).then(function(response) {
                     .attr("width", xBandScale.bandwidth())
                     .attr("height", d => chartHeight - yLinearScale(d.num_restaurants))
 
+   // append chart title
+   chartGroup.append("text")
+      .attr("x", chartWidth / 2)
+      .attr("y", -15)
+      .style("text-anchor", "middle")
+      .classed("chartTitle", true)
+      .text('Top 10 Categories in the neighbourhood')
+
   // append y axis
   chartGroup.append("text")
       .attr("transform", "rotate(-90)")
