@@ -103,3 +103,18 @@ In this project, we created a dashboard page with these transformed datasets: To
 
  ## Deployment
  This app is deployed public on Heroku App, click the following link to see how it looks like [Toronto Metrics](https://bootcamp-gta-restaurant-app.herokuapp.com/)
+ 
+ 
+## Technologies
+This project was created with:
+* JavaScript
+* HTML/CSS
+* D3.js
+* Plotly
+* SQLAlchemy
+* Flask
+* Python 3.8
+* Pandas
+* Jupyter Notebook
+* PostgreSQL
+* Leaflet
