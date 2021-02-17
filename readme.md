@@ -43,9 +43,9 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ## 🔭 ETL Process
   ### Extract
-  Data sourced from
+  Data sourced from[Toronto data](https://open.toronto.ca/dataset/neighbourhood-profiles/)
   ### Transform
-  Data cleaned and transformed by using Python Jupyter Notebook -[Transform.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Transform.ipynb)
+  Data cleaned and transformed by using Python Jupyter Notebook - [Transform.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Transform.ipynb)
   ### Load
   - This project used Python Jupyter Notebook to load transformed data in to PostgreSQL database - [Load.ipynb](./Toronto-Analysis-Heroku/Unpack%20me/ETL/Load.ipynb)
   - Python Flask–powered RESTful API were used to deploy the data into the web, and API end point links created. API links store our cleaned and transformed data in json format and are publicly accessible for visitors of our website.
