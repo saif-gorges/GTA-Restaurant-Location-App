@@ -71,7 +71,7 @@ In this project, we created a dashboard page with these transformed datasets: To
   
   ![panel](./Toronto-Analysis-Heroku/static/css/Images/panel.jpg) ![restaurant-gif](./Toronto-Analysis-Heroku/static/css/Images/restaurant-gif.gif) 
   
-  ### [3] <a name="ethnicity"></a>Totonro Ethinicty in Each Neighbourhood 
+  ### [3] <a name="ethnicity"></a>Toronto Ethinicty in Each Neighbourhood 
   * The selected neighbourhood information from Toronto Geomap is passed into the ethnicity. The Toronto Ethnicity Barchart is created and annotated from API calls with labels, text and hover information. Bar graph represents the ethnicity of each region in Toronto. 
   
   ![ethnicity](./Toronto-Analysis-Heroku/static/css/Images/ethnicity.gif)
